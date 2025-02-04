@@ -1,47 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul {
-    background-color: black;
-    padding: 10px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-header {
-    padding: 50px;
-}
-
-header img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-section {
-    padding: 50px;
-}
-
-section img {
-    max-width: 300px;
-    border-radius: 10px;
-}
-
+/* Carousel Styles */
 .carousel {
     position: relative;
     max-width: 600px;
@@ -83,4 +40,3 @@ button.next { right: 10px; }
 button:hover {
     background: rgba(0, 0, 0, 0.8);
 }
-
