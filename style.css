@@ -1,7 +1,7 @@
 /* Carousel Styles */
 .carousel {
     position: relative;
-    max-width: 100%; /* Make the carousel width responsive */
+    max-width: 100%; /* Make the carousel responsive */
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
@@ -9,17 +9,17 @@
 
 .carousel-images {
     display: flex;
-    width: 300%;
+    width: 300%; /* Make sure images are in a row */
     transition: transform 1s ease-in-out;
 }
 
 .slide {
-    width: 100%;  /* Make each image fill the carousel container */
-    height: 100%;  /* Set height to 100% of the container */
-    object-fit: cover;  /* Ensure the image covers the area without distorting */
+    width: 100%;  /* Each image takes up 100% of the carousel's container */
+    height: auto;  /* Maintain image aspect ratio */
+    object-fit: cover;  /* Ensure images cover the area without distortion */
 }
 
-
+/* Navigation buttons */
 button.prev, button.next {
     position: absolute;
     top: 50%;
@@ -38,4 +38,39 @@ button.next { right: 10px; }
 
 button:hover {
     background: rgba(0, 0, 0, 0.8);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For mobile screens (up to 600px width) */
+@media (max-width: 600px) {
+    .carousel {
+        max-width: 100%; /* Ensure carousel fits the screen */
+        height: 300px; /* Set height of carousel to be fixed on mobile */
+    }
+
+    .carousel-images {
+        width: 300%; /* Keep all images in a row */
+    }
+
+    .slide {
+        height: 100%; /* Make sure images cover the carousel's height */
+        width: 100%;  /* Make each image fit within the carousel */
+    }
+
+    button.prev, button.next {
+        font-size: 18px;  /* Reduce button size for smaller screens */
+        padding: 8px;
+    }
+}
+
+/* For tablets and small screens (600px - 768px width) */
+@media (max-width: 768px) {
+    .carousel {
+        height: 400px; /* Adjust carousel height for tablet screens */
+    }
+
+    button.prev, button.next {
+        font-size: 22px;  /* Slightly larger buttons for tablets */
+    }
 }
