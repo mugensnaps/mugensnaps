@@ -1,22 +1,26 @@
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");
+const carousel = document.querySelector(".carousel-images");
 
 function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.remove("active");
-        if (i === index) {
-            slide.classList.add("active");
-        }
-    });
+    // Prevent the carousel from sliding out of range
+    if (index >= slides.length) {
+        slideIndex = 0; // Go back to the first slide
+    } else if (index < 0) {
+        slideIndex = slides.length - 1; // Go to the last slide
+    }
+
+    // Use transform to slide the images (like a horizontal scroll effect)
+    carousel.style.transform = `translateX(-${slideIndex * 100}%)`;
 }
 
 function nextSlide() {
-    slideIndex = (slideIndex + 1) % slides.length;
+    slideIndex++;
     showSlide(slideIndex);
 }
 
 function prevSlide() {
-    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+    slideIndex--;
     showSlide(slideIndex);
 }
 
@@ -25,5 +29,3 @@ setInterval(nextSlide, 3000);
 
 // Show the first slide by default
 showSlide(slideIndex);
-a
-

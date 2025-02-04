@@ -1,7 +1,7 @@
 /* Carousel Styles */
 .carousel {
     position: relative;
-    max-width: 600px;
+    max-width: 100%; /* Make the carousel width responsive */
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
@@ -9,17 +9,16 @@
 
 .carousel-images {
     display: flex;
-    width: 100%;
+    width: 300%;
+    transition: transform 1s ease-in-out;
 }
 
 .slide {
-    width: 100%;
-    display: none; /* Hide all images by default */
+    width: 100%;  /* Make each image fill the carousel container */
+    height: 100%;  /* Set height to 100% of the container */
+    object-fit: cover;  /* Ensure the image covers the area without distorting */
 }
 
-.slide.active {
-    display: block; /* Show only the active image */
-}
 
 button.prev, button.next {
     position: absolute;
