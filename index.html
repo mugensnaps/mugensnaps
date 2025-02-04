@@ -3,38 +3,45 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial=scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mugen Snaps</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-        <nav>
-            <ul>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header>
+        <h1>Mugen Snaps</h1>
+        <p>Capturing moments, creating memories.</p>
+    </header>
 
-    <section id="Portfolio">
+    <nav>
+        <ul>
+            <li><a href="#" class="tablink" onclick="openTab(event, 'portfolio')">Portfolio</a></li>
+            <li><a href="#" class="tablink" onclick="openTab(event, 'about')">About</a></li>
+            <li><a href="#" class="tablink" onclick="openTab(event, 'contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="portfolio" class="tabcontent">
         <h2>Snaps by Mugen</h2>
-    <div class="gallery">
-        <img src="Images/IMG_0954.JPG" alt="Photo 1">
-        <img src="Images/IMG_0988.JPG" alt="Photo 2">
-        <img src="Images/IMG_1014.JPG" alt="Photo 3">
+        <div class="gallery">
+            <img src="Images/IMG_0954.JPG" alt="Photo 1">
+            <img src="Images/IMG_0988.JPG" alt="Photo 2">
+            <img src="Images/IMG_1014.JPG" alt="Photo 3">
+        </div>
     </div>
-</section>
 
-    <section id="About Me">
-<h2>About Me</h2>
-<p>I am a passionate photographer specializing in landscape and portrait photography.</p>
-    </section>
+    <div id="about" class="tabcontent">
+        <h2>About Me</h2>
+        <p>I am a passionate photographer specializing in landscape and portrait photography.</p>
+    </div>
 
-    <section id="Contact">
+    <div id="contact" class="tabcontent">
         <h2>Contact Me</h2>
-        <p>Email:mugensnaps@outlook.com</p>
-    </section>
+        <p>Email: mugensnaps@outlook.com</p>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,31 +1,23 @@
-let slideIndex = 0;
-const slides = document.querySelectorAll(".slide");
-const carousel = document.querySelector(".carousel-images");
+// Function to show the clicked tab and hide the others
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
 
-function showSlide(index) {
-    // Prevent the carousel from sliding out of range
-    if (index >= slides.length) {
-        slideIndex = 0; // Go back to the first slide
-    } else if (index < 0) {
-        slideIndex = slides.length - 1; // Go to the last slide
+    // Hide all tab content
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
     }
 
-    // Use transform to slide the images (like a horizontal scroll effect)
-    carousel.style.transform = `translateX(-${slideIndex * 100}%)`;
+    // Remove "active" class from all tab links
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+
+    // Show the clicked tab content and add "active" class to the tab link
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("active");
 }
 
-function nextSlide() {
-    slideIndex++;
-    showSlide(slideIndex);
-}
-
-function prevSlide() {
-    slideIndex--;
-    showSlide(slideIndex);
-}
-
-// Auto-slide every 3 seconds
-setInterval(nextSlide, 3000);
-
-// Show the first slide by default
-showSlide(slideIndex);
+// Set default tab to show (Portfolio in this case)
+document.getElementsByClassName("tablink")[0].click();

@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,6 +15,8 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    background: #333;
+    margin: 0;
 }
 
 nav ul li {
@@ -24,6 +27,24 @@ nav ul li {
 nav a {
     color: white;
     text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+/* Tab content styles */
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+.tabcontent img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .gallery {
@@ -31,11 +52,25 @@ nav a {
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    padding: 20px;
 }
 
-.gallery img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
+.tablinks {
+    background-color: #f1f1f1;
+    color: black;
+    padding: 14px 16px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+.tablinks:hover {
+    background-color: #ddd;
+}
+
+/* Active tab style */
+.tablink.active {
+    background-color: #ddd;
+    color: black;
+}
+
