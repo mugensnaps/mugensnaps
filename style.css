@@ -1,76 +1,98 @@
-/* Carousel Styles */
-.carousel {
-    position: relative;
-    max-width: 100%; /* Make the carousel responsive */
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 10px;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-.carousel-images {
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Gallery Styles */
+.gallery {
     display: flex;
-    width: 300%; /* Make sure images are in a row */
-    transition: transform 1s ease-in-out;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0;
 }
 
-.slide {
-    width: 100%;  /* Each image takes up 100% of the carousel's container */
-    height: auto;  /* Maintain image aspect ratio */
-    object-fit: cover;  /* Ensure images cover the area without distortion */
+.gallery img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Navigation buttons */
-button.prev, button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    border-radius: 5px;
+.gallery img:hover {
+    transform: scale(1.05);
 }
 
-button.prev { left: 10px; }
-button.next { right: 10px; }
-
-button:hover {
-    background: rgba(0, 0, 0, 0.8);
+/* Contact & About Sections */
+section {
+    margin: 50px 0;
+    padding: 20px;
 }
 
-/* Media Queries for Responsiveness */
-
-/* For mobile screens (up to 600px width) */
-@media (max-width: 600px) {
-    .carousel {
-        max-width: 100%; /* Ensure carousel fits the screen */
-        height: 300px; /* Set height of carousel to be fixed on mobile */
-    }
-
-    .carousel-images {
-        width: 300%; /* Keep all images in a row */
-    }
-
-    .slide {
-        height: 100%; /* Make sure images cover the carousel's height */
-        width: 100%;  /* Make each image fit within the carousel */
-    }
-
-    button.prev, button.next {
-        font-size: 18px;  /* Reduce button size for smaller screens */
-        padding: 8px;
-    }
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-/* For tablets and small screens (600px - 768px width) */
-@media (max-width: 768px) {
-    .carousel {
-        height: 400px; /* Adjust carousel height for tablet screens */
-    }
-
-    button.prev, button.next {
-        font-size: 22px;  /* Slightly larger buttons for tablets */
-    }
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
 }
