@@ -41,3 +41,46 @@ section img {
     max-width: 300px;
     border-radius: 10px;
 }
+
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+}
+
+.slide {
+    width: 100%;
+    display: none; /* Hide all images by default */
+}
+
+.slide.active {
+    display: block; /* Show only the active image */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+
+button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
