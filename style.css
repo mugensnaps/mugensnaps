@@ -4,13 +4,13 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #2E0935; /* Matches the purple tone from the image */
+    background-color: #482f41; /* Matches the purple tone from the image */
     color: white;
 }
 
 /* Navigation Bar Styling */
 nav {
-    background-color: #482f41; /* Slightly darker purple for the navbar */
+    background-color: #3f2939; /* Slightly darker purple for the navbar */
     padding: 10px 20px;
     position: sticky; /* Ensures it stays at the top */
     top: 0;
