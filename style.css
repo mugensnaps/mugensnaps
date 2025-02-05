@@ -11,7 +11,7 @@ body {
 /* Navigation Bar Styling */
 nav {
     background-color: #3f2939; /* Slightly darker purple for the navbar */
-    padding: 10px 20px;
+    padding: 15px 20px;
     position: sticky; /* Ensures it stays at the top */
     top: 0;
     z-index: 1000;
@@ -37,15 +37,6 @@ nav a {
     font-size: 0.8em; /* Smaller text for the navbar links */
     transition: color 0.3s ease;
 }
-
-nav a:hover {
-    color: #482f41; /* Lighter purple on hover */
-}
-
-nav a:active {
-    color: #c4bfb8; /* Ensures the color resets after a touch interaction */
-}
-
 
 /* Header Section */
 header {
