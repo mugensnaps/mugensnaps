@@ -1,22 +1,29 @@
-/* General Styles */
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #2E0935; /* Matches the purple tone from the image */
+    color: white;
 }
 
-header {
-    background: black;
-    color: white;
-    padding: 20px;
+/* Navigation Bar Styling */
+nav {
+    background-color: #2C0035; /* Slightly darker purple for the navbar */
+    padding: 10px 20px;
+    position: sticky; /* Ensures it stays at the top */
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    background: #333;
     margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul li {
@@ -27,50 +34,30 @@ nav ul li {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 0.9em; /* Smaller text for the navbar links */
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ddd;
+    color: #C49EEA; /* Lighter purple on hover */
 }
 
-/* Tab content styles */
-.tabcontent {
-    display: none;
-    padding: 20px;
+/* Header Section */
+header {
+    margin-top: 20px; /* Adds spacing below the navbar */
 }
 
-.tabcontent img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    margin: 10px;
-}
-
+/* Gallery Styling */
 .gallery {
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
-.tablinks {
-    background-color: #f1f1f1;
-    color: black;
-    padding: 14px 16px;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
+.gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
 }
-
-.tablinks:hover {
-    background-color: #ddd;
-}
-
-/* Active tab style */
-.tablink.active {
-    background-color: #ddd;
-    color: black;
-}
-
