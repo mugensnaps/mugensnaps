@@ -22,8 +22,8 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
 nav ul li {
@@ -34,12 +34,12 @@ nav ul li {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 0.9em; /* Smaller text for the navbar links */
+    font-size: 0.8em; /* Smaller text for the navbar links */
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #C49EEA; /* Lighter purple on hover */
+    color: #482f41; /* Lighter purple on hover */
 }
 
 /* Header Section */
