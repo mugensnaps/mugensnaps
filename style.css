@@ -5,7 +5,7 @@ body {
     padding: 0;
     text-align: center;
     background-color: #482f41; /* Matches the purple tone from the image */
-    color: white;
+    color: #c4bfb8;
 }
 
 /* Navigation Bar Styling */
@@ -23,7 +23,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 nav ul li {
@@ -32,7 +32,7 @@ nav ul li {
 }
 
 nav a {
-    color: white;
+    color: #c4bfb8;
     text-decoration: none;
     font-size: 0.8em; /* Smaller text for the navbar links */
     transition: color 0.3s ease;
@@ -41,6 +41,11 @@ nav a {
 nav a:hover {
     color: #482f41; /* Lighter purple on hover */
 }
+
+nav a:active {
+    color: #c4bfb8; /* Ensures the color resets after a touch interaction */
+}
+
 
 /* Header Section */
 header {
