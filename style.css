@@ -1,58 +1,78 @@
-/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #5A4A75; /* Matte Purple */
+    color: #FFF;
     text-align: center;
-    background-color: #482f41; /* Matches the purple tone from the image */
-    color: #c4bfb8;
-}
-
-/* Navigation Bar Styling */
-nav {
-    background-color: #3f2939; /* Slightly darker purple for the navbar */
-    padding: 15px 20px;
-    position: sticky; /* Ensures it stays at the top */
-    top: 0;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+header {
+    background: #3D315B;
+    padding: 15px;
 }
 
 nav a {
-    color: #c4bfb8;
+    color: white;
+    margin: 0 15px;
     text-decoration: none;
-    font-size: 0.8em; /* Smaller text for the navbar links */
 }
 
-/* Header Section */
-header {
-    margin-top: 20px; /* Adds spacing below the navbar */
+.hero {
+    padding: 50px;
 }
 
-/* Gallery Styling */
+.hero h2 {
+    font-size: 24px;
+}
+
+.btn {
+    display: inline-block;
+    background: #A682BC;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
 .gallery {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding: 20px;
+    padding: 30px;
 }
 
-.gallery img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid img {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.grid img:hover {
+    transform: scale(1.05);
+}
+
+.contact form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact button {
+    background: #A682BC;
+    padding: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
