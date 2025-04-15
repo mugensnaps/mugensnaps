@@ -279,6 +279,79 @@ nav{
 
 }
 
+.footer_container{
+    display: grid;
+    gap: 4rem 0;
+    align-items: center;
+}
+
+.footer_col{
+    padding-inline: 2rem;
+}
+
+.footer_container img{ 
+    max-width: 170px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+}
+
+.footer_socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer_socials a{
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+.footer_socials a:hover{
+    color: var(--text-light);
+}
+
+.footer_links{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.footer_links a{
+    display: block;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.footer_links a:hover{
+    color: var(--text-light);
+}
+
+.footer_col h4{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.footer_col p{
+    color: var(--text-light);
+    line-height: 1.75rem;
+    text-align: center;
+}
+
+.footer_bar{
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--extra-light);
+    background-color: var(--text-dark);
+    text-align: center;
+}
+
 @media (width > 540px){
     .portfolio_grid{
         grid-template-columns: repeat(2, 1fr);
@@ -286,6 +359,18 @@ nav{
 
     .service_grid{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer_col:nth-child(1){
+        grid-area: 1/1/2/3;
+    }
+
+    .footer_col:nth-child(3){
+        border-left: 2px solid var(--text-dark);
     }
 }
 
@@ -331,6 +416,20 @@ nav{
 
     .service_grid{
         grid-template-columns: repeat(3,1fr);
+    }
+
+    .footer_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer_col:nth-child(1){
+        grid-area: 1/2/2/3;
+        border-left: 2px solid var(--text-dark);
+        border-right: 2px solid var(--text-dark);
+    }
+
+    .footer_col:nth-child(3){
+        border: none;
     }
 }
 
