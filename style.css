@@ -161,6 +161,134 @@ nav{
 
 }
 
+.about_container .section_description{
+    max-width: 900px;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+
+.about_container img{
+    max-width: 170px;
+    margin-inline: auto;
+}
+
+.portfolio_grid{
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.portfolio_card{
+    position: relative;
+    isolation: isolate;
+}
+
+.portfolio_card::after{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: var(--header-font);
+    color: var(--white);
+}
+
+.portfolio_card:nth-child(1)::after{
+    content: "Portraits";
+}
+
+.portfolio_card:nth-child(2)::after{
+    content: "Weddings";
+}
+
+.portfolio_card:nth-child(3)::after{
+    content: "Products";
+}
+
+.portfolio_content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.portfolio_card:hover .portfolio_content{
+    opacity: 1;
+}
+
+.service{
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
+    url("Images/service.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.service_container .section_header{
+    color: var(--white);
+}
+
+.service_container .section_description{
+    max-width: 600px;
+    margin-inline: auto;
+    color: var(--extra-light);
+}
+
+.service_grid{
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.service_card{
+    text-align: center;
+}
+
+.service_card h4{
+    position: relative;
+    isolation: isolate;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-family: var(--header-font);
+    color: var(--white);
+}
+
+.service_card h4::after{
+    position: absolute;
+    content: "~";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.service_card p{
+    color: var(--extra-light);
+    line-height: 1.75rem;
+
+}
+
+@media (width > 540px){
+    .portfolio_grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service_grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (width > 768px){
     .header{
         min-height: 650px;
@@ -195,5 +323,23 @@ nav{
 
     .nav_links .nav_logo img{
         max-width: 150px;
+    }
+
+    .portfolio_grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service_grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (width > 1024px){
+    .header{
+        min-height: 700px;
+    }
+
+    .portfolio_grid{
+        gap: 2rem;
     }
 }
