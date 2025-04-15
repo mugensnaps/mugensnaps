@@ -113,7 +113,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    background-color: var(--text-dark);
+    background-color: #3f2939;
 }
 
 .nav_logo img{
