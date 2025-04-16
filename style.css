@@ -135,7 +135,7 @@ nav{
     align-items: center;
     flex-direction: column;
     gap: 2rem;  
-    background-color: var(--text-dark);
+    background-color: #3f2939;
     transform: translateY(-100%); 
     transition: 0.5s;
     z-index: -1;
@@ -265,7 +265,6 @@ nav{
 
 .service_card h4::after{
     position: absolute;
-    content: "~";
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -352,6 +351,74 @@ nav{
     text-align: center;
 }
 
+.portfolio_page_container {
+    padding-top: 8rem;
+}
+
+.portfolio_page_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.portfolio_page_item {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.portfolio_page_item:hover {
+    transform: scale(1.02);
+}
+
+.portfolio_page_item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.portfolio_page_item:hover img {
+    transform: scale(1.05);
+}
+
+/* Portfolio Page Specific Styles */
+.portfolio-page .header {
+    background-image: none;
+    min-height: auto;
+}
+
+.portfolio-header {
+    background-color: #3f2939;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-header nav {
+    background-color: #3f2939;
+}
+
+.portfolio-header .nav_header {
+    background-color: #3f2939;
+}
+
+.portfolio-page .nav_links {
+    background-color: #3f2939;
+}
+
+.portfolio-page .nav_links a {
+    color: var(--white);
+}
+
+.portfolio-page .nav_links a:hover {
+    border-color: var(--white);
+}
+
+.portfolio-page .portfolio_page_container {
+    padding-top: 2rem;
+}
+
 @media (width > 540px){
     .portfolio_grid{
         grid-template-columns: repeat(2, 1fr);
@@ -430,6 +497,10 @@ nav{
 
     .footer_col:nth-child(3){
         border: none;
+    }
+
+    .portfolio_page_grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
 
