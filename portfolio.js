@@ -12,7 +12,7 @@ if (portfolioType) {
 const portfolioImages = {
     portraits: [
         'Images/image1.jpeg',
-        'Images/image2.jpeg',
+        'Images/image2.jpg',
         'Images/image3.jpeg',
         // Add more portrait images
     ],
@@ -23,7 +23,7 @@ const portfolioImages = {
         // Add more wedding images
     ],
     products: [
-        'Images/image2.jpeg',
+        'Images/image2.jpg',
         'Images/image3.jpeg',
         'Images/image4.jpeg',
         // Add more product images
