@@ -6,22 +6,22 @@ if (portfolioType) {
     portfolioTitle.textContent = `${portfolioType.charAt(0).toUpperCase() + portfolioType.slice(1)} Portfolio`;
 }
 
-// Portfolio images data
 const portfolioImages = {
     portraits: [
-        'Images/image1.jpeg',
-        'Images/image2.jpg',
-        'Images/image3.jpeg',
+        'Images/portrait1.jpg',
+        'Images/portrait2.jpg',
+        'Images/portrait4.jpg',
+        'Images/portrait5.jpg',
     ],
     weddings: [
-        'Images/image4.jpeg',
-        'Images/image5.jpeg',
-        'Images/image1.jpeg',
+        'Images/wedding3.jpg',
+        'Images/wedding1.jpg',
+        'Images/wedding6.jpg',
     ],
-    products: [
-        'Images/image2.jpg',
-        'Images/image3.jpeg',
-        'Images/image4.jpeg',
+    events: [
+        'Images/event1.jpg',
+        'Images/event2.jpg',
+        'Images/event3.jpg',
     ]
 };
 
@@ -30,7 +30,7 @@ function loadPortfolioImages() {
     portfolioGrid.innerHTML = '';
     
     const imagesToShow = portfolioType ? portfolioImages[portfolioType] : 
-        [...portfolioImages.portraits, ...portfolioImages.weddings, ...portfolioImages.products];
+        [...portfolioImages.portraits, ...portfolioImages.weddings, ...portfolioImages.events];
     
     imagesToShow.forEach(imageSrc => {
         const imgElement = document.createElement('div');
@@ -70,13 +70,11 @@ function setupLightbox() {
     });
 }
 
-// Close lightbox
 lightbox.addEventListener('click', () => {
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
 });
 
-// Close with ESC
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightbox.classList.contains('active')) {
         lightbox.classList.remove('active');
@@ -84,12 +82,10 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Initialize
 document.addEventListener('DOMContentLoaded', () => {
     loadPortfolioImages();
     setupLightbox();
     
-    // Menu toggle
     const menuBtn = document.getElementById("menu-btn");
     const navLinks = document.getElementById("nav-links");
     const menuBtnIcon = menuBtn.querySelector("i");
